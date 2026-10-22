@@ -1,0 +1,863 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+font-family: "Inter", Arial, sans-serif;
+color: #202938;
+background: #f5f7fb;
+font-synthesis: none;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+font-optical-sizing: auto;
+font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+min-width: 320px;
+min-height: 100vh;
+}
+
+button,
+input {
+font: inherit;
+}
+
+button {
+cursor: pointer;
+}
+
+.app {
+min-height: 100vh;
+}
+
+.sidebar {
+width: 245px;
+background: #fff;
+border-right: 1px solid #e9edf4;
+padding: 30px 20px;
+position: fixed;
+inset: 0 auto 0 0;
+display: flex;
+flex-direction: column;
+}
+
+.brand {
+font-size: 24px;
+letter-spacing: -1px;
+margin: 0 0 50px;
+font-weight: 800;
+}
+
+.brand span {
+color: #6558e8;
+}
+
+.menu-label,
+.eyebrow {
+color: #929bad;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.4px;
+}
+
+.menu-item {
+padding: 14px 12px;
+border-radius: 9px;
+color: #647086;
+font-size: 13px;
+margin: 4px 0;
+}
+
+.menu-item.active {
+background: #efedff;
+color: #5d50d9;
+font-weight: 700;
+}
+
+.sidebar-bottom {
+margin-top: auto;
+font-size: 12px;
+color: #929bad;
+}
+
+.main {
+margin-left: 245px;
+padding: 42px;
+max-width: 1800px;
+}
+
+.topbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+margin-bottom: 30px;
+}
+
+.eyebrow {
+margin-bottom: 10px;
+}
+
+h2 {
+font-size: 29px;
+margin: 0 0 9px;
+letter-spacing: -1px;
+}
+
+.subtitle,
+.table-heading p {
+color: #8993a5;
+font-size: 13px;
+margin: 0;
+}
+
+.primary-button,
+.secondary-button {
+padding: 11px 17px;
+border-radius: 8px;
+border: 1px solid transparent;
+font-size: 12px;
+font-weight: 600;
+}
+
+.primary-button {
+background: #6558e8;
+color: white;
+}
+
+.primary-button:hover {
+background: #5144d0;
+}
+
+.secondary-button {
+background: white;
+border-color: #e2e7f0;
+color: #586377;
+margin-right: 8px;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+margin-bottom: 26px;
+}
+
+.stat-card,
+.table-card,
+.product-form {
+background: white;
+border: 1px solid #e9edf4;
+border-radius: 13px;
+padding: 23px;
+}
+
+.stat-icon {
+width: 37px;
+height: 37px;
+border-radius: 10px;
+display: grid;
+place-items: center;
+font-size: 18px;
+font-weight: 700;
+}
+
+.purple {
+background: #efedff;
+color: #6558e8;
+}
+
+.green {
+background: #e5f8ef;
+color: #1b9d67;
+}
+
+.orange {
+background: #fff1df;
+color: #e59127;
+}
+
+.red {
+background: #ffe8e9;
+color: #e05260;
+}
+
+.stat-card > p {
+color: #7d8798;
+font-size: 12px;
+margin: 19px 0 8px;
+}
+
+.stat-card h3 {
+font-size: 27px;
+margin: 0 0 10px;
+letter-spacing: -1px;
+overflow-wrap: anywhere;
+}
+
+.stat-note {
+color: #a0a8b6;
+font-size: 11px;
+}
+
+.table-card {
+padding: 0;
+overflow: hidden;
+}
+
+.table-heading {
+padding: 24px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 16px;
+border-bottom: 1px solid #edf0f5;
+}
+
+.table-heading h3,
+.product-form h3 {
+margin: 0 0 7px;
+font-size: 16px;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+text-align: left;
+}
+
+th {
+background: #fafbfe;
+color: #9099aa;
+font-size: 10px;
+letter-spacing: 0.8px;
+}
+
+th,
+td {
+padding: 17px 22px;
+border-bottom: 1px solid #edf0f5;
+font-size: 12px;
+}
+
+td {
+color: #647086;
+}
+
+.product-name {
+color: #283346;
+font-weight: 600;
+}
+
+.badge {
+display: inline-block;
+border-radius: 20px;
+padding: 6px 10px;
+font-size: 10px;
+font-weight: 600;
+}
+
+.badge-good {
+background: #e5f8ef;
+color: #16885b;
+}
+
+.badge-low {
+background: #fff0df;
+color: #b87517;
+}
+
+.empty-state {
+padding: 55px 20px;
+text-align: center;
+color: #8b95a6;
+font-size: 13px;
+}
+
+.empty-icon {
+font-size: 35px;
+color: #6558e8;
+margin-bottom: 15px;
+}
+
+.empty-state h3 {
+color: #293346;
+margin-bottom: 8px;
+}
+
+.empty-state .primary-button {
+margin-top: 15px;
+}
+
+.product-form {
+margin-bottom: 24px;
+}
+
+.form-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 16px;
+margin: 20px 0;
+}
+
+.form-grid label {
+font-size: 12px;
+color: #687386;
+}
+
+.form-grid input {
+display: block;
+width: 100%;
+padding: 11px;
+border: 1px solid #dfe5ee;
+border-radius: 7px;
+margin-top: 8px;
+outline-color: #6558e8;
+}
+
+.error-box {
+background: #fff0f0;
+border: 1px solid #f2caca;
+color: #a82e36;
+padding: 16px;
+border-radius: 9px;
+margin-bottom: 20px;
+font-size: 12px;
+}
+
+.table-scroll {
+overflow-x: auto;
+}
+
+footer {
+padding: 25px 0;
+text-align: center;
+color: #a0a8b6;
+font-size: 11px;
+}
+
+@media (max-width: 1100px) {
+.main {
+padding: 28px;
+}
+
+.stats {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+@media (max-width: 650px) {
+.sidebar {
+position: static;
+width: 100%;
+padding: 18px;
+}
+
+.brand {
+margin-bottom: 20px;
+}
+
+.sidebar .menu-label,
+.sidebar .menu-item,
+.sidebar-bottom {
+display: none;
+}
+
+.main {
+margin-left: 0;
+padding: 20px 14px;
+}
+
+.topbar {
+align-items: flex-start;
+flex-direction: column;
+}
+
+h2 {
+font-size: 24px;
+}
+
+.stats {
+grid-template-columns: 1fr;
+}
+
+.form-grid {
+grid-template-columns: 1fr;
+}
+}
+
+
+/* Search bar */
+.search-container {
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf0f7;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 11px 14px;
+  border: 1px solid #dfe4ee;
+  border-radius: 8px;
+  background: #fff;
+  color: #1e293b;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: #6554e8;
+  box-shadow: 0 0 0 3px rgba(101, 84, 232, 0.12);
+}
+
+/* Edit and Delete buttons */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-button {
+  padding: 9px 12px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff;
+  color: #dc2626;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.delete-button:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+.delete-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.table-scroll table th:last-child,
+.table-scroll table td:last-child {
+  min-width: 150px;
+}
+
+@media (max-width: 700px) {
+  .search-container {
+    padding: 12px;
+  }
+
+  .search-input {
+    max-width: 100%;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Stock Movement page */
+.movement-page {
+  width: 100%;
+}
+
+.movement-stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.movement-form-card {
+  margin-bottom: 24px;
+}
+
+.movement-form {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.movement-form select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #dfe4ee;
+  border-radius: 8px;
+  background: #fff;
+  color: #1e293b;
+  font: inherit;
+}
+
+.movement-form select:focus {
+  outline: none;
+  border-color: #6554e8;
+  box-shadow: 0 0 0 3px rgba(101, 84, 232, 0.12);
+}
+
+.stock-available {
+  margin: 16px 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.success-box {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.movement-page .table-card {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 800px) {
+  .movement-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .movement-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar .menu-item {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.sidebar .menu-item.active {
+  background: #f0edff;
+  color: #6554e8;
+}
+
+.sidebar .menu-item:hover {
+  background: #f5f3ff;
+}
+
+/* StockFlow final UI fixes */
+
+.sidebar .menu-item {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  text-align: left;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar .menu-item:hover {
+  background: #f3f0ff;
+  color: #6554e8;
+}
+
+.sidebar .menu-item.active {
+  background: #efebff;
+  color: #6554e8;
+  font-weight: 600;
+}
+
+.stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stat-card {
+  min-width: 0;
+  padding: 20px 12px;
+}
+
+.stat-card h3 {
+  font-size: clamp(18px, 1.5vw, 25px);
+  overflow-wrap: anywhere;
+  line-height: 1.3;
+}
+
+.stat-note {
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   STOCKFLOW - FINAL UI POLISH
+   ========================================= */
+
+/* Fix dark input fields throughout the app */
+.product-form input,
+.product-form select,
+.movement-form input,
+.movement-form select {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #dbe3ef !important;
+  border-radius: 8px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.product-form input::placeholder,
+.movement-form input::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1;
+}
+
+.product-form input:focus,
+.product-form select:focus,
+.movement-form input:focus,
+.movement-form select:focus {
+  outline: none;
+  border-color: #6554e8 !important;
+  box-shadow: 0 0 0 3px rgba(101, 84, 232, 0.12);
+}
+
+/* Remove unwanted vertical borders and narrow layout */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main,
+.movement-page {
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  flex: 1;
+  margin: 0;
+  border: none !important;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Keep the sidebar separate from page content */
+.sidebar {
+  flex-shrink: 0;
+}
+
+/* Make cards and forms use available page width */
+.main .table-card,
+.movement-page .table-card,
+.movement-page .movement-form-card {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* Improve spacing on the movement page */
+.movement-page {
+  padding: 32px;
+}
+
+.movement-page .topbar {
+  margin-bottom: 24px;
+}
+
+.movement-page .movement-stats {
+  margin-bottom: 24px;
+}
+
+.movement-page .product-form {
+  background: #ffffff;
+}
+
+/* Prevent long tables from breaking the layout */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .movement-page {
+    padding: 18px;
+  }
+}
+
+
+
+/* ==========================================
+   STOCKFLOW - STABLE DESKTOP LAYOUT
+   ========================================== */
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* Sidebar remains in the normal flex layout */
+.app > .sidebar {
+  position: relative;
+  inset: auto;
+  flex: 0 0 210px;
+  width: 210px;
+  min-width: 210px;
+  min-height: 100vh;
+  height: auto;
+  box-sizing: border-box;
+  z-index: 2;
+  background: #ffffff;
+  border-right: 1px solid #e5eaf2;
+}
+
+/* Main content starts after the sidebar */
+.app > .main,
+.app > .movement-page {
+  position: relative;
+  flex: 1 1 0;
+  width: 0;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+/* Keep the dashboard content centered on desktop */
+.app > .main {
+  padding: 32px;
+}
+
+.app > .main .topbar,
+.app > .main .stats,
+.app > .main .table-card,
+.app > .main .product-form {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Four readable dashboard cards */
+.app > .main .stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.app > .main .stat-card {
+  min-width: 0;
+}
+
+.app > .main .stat-card h3 {
+  font-size: clamp(18px, 1.5vw, 25px);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+/* Keep tables within the available content width */
+.app > .main .table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.app > .main table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Desktop, tablet, and mobile */
+@media (max-width: 1050px) {
+  .app > .sidebar {
+    flex-basis: 185px;
+    width: 185px;
+    min-width: 185px;
+  }
+
+  .app > .main,
+  .app > .movement-page {
+    padding: 24px;
+  }
+
+  .app > .main .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .app > .sidebar {
+    flex-basis: 145px;
+    width: 145px;
+    min-width: 145px;
+  }
+
+  .app > .main,
+  .app > .movement-page {
+    padding: 14px;
+  }
+
+  .app > .main .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .app > .main .topbar {
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+
